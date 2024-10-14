@@ -1,0 +1,110 @@
+  <!-- Home Page -->
+<div class="home-page">
+    <h1>Welcome to Our Mental Health Counseling Platform</h1>
+    <p>Get started with our online counseling services today!</p>
+    <button>Sign Up</button>
+  </div>
+  
+  <!-- Sign-up/Login Page -->
+  <div class="sign-up-login-page">
+    <h1>Sign Up or Log In</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button>Sign Up</button>
+      <button>Log In</button>
+    </form>
+  </div>
+  
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <h1>Dashboard</h1>
+    <div class="profile-info">
+      <h2>Profile Information</h2>
+      <p>Name: {{ user.name }}</p>
+      <p>Email: {{ user.email }}</p>
+    </div>
+    <div class="appointment-schedule">
+      <h2>Appointment Schedule</h2>
+      <ul>
+        <li>Upcoming Appointments:</li>
+        <li>{{ appointment.date }} - {{ appointment.time }}</li>
+      </ul>
+    </div>
+    <div class="resource-library">
+      <h2>Resource Library</h2>
+      <ul>
+        <li>Resources:</li>
+        <li>{{ resource.title }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Appointment Scheduling -->
+  <div class="appointment-scheduling">
+    <h1>Schedule an Appointment</h1>
+    <form>
+      <label for="therapist">Therapist:</label>
+      <select id="therapist" name="therapist">
+        <option value="therapist1">Therapist 1</option>
+        <option value="therapist2">Therapist 2</option>
+      </select><br><br>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date"><br><br>
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time"><br><br>
+      <button>Schedule Appointment</button>
+    </form>
+  </div>
+  
+  <!-- Therapist Profile -->
+  <div class="therapist-profile">
+    <h1>Therapist Profile</h1>
+    <div class="profile-info">
+      <h2>Profile Information</h2>
+      <p>Name: {{ therapist.name }}</p>
+      <p>Qualifications: {{ therapist.qualifications }}</p>
+    </div>
+    <div class="ratings-reviews">
+      <h2>Ratings and Reviews</h2>
+      <ul>
+        <li>Rating: {{ therapist.rating }}</li>
+        <li>Reviews: {{ therapist.reviews }}</li>
+      </div>
+    </div>
+    
+    <!-- Resource Library -->
+    <div class="resource-library">
+      <h1>Resource Library</h1>
+      <ul>
+        <li>
+          <h2>{{ resource.title }}</h2>
+          <p>{{ resource.description }}</p>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Online Community -->
+    <div class="online-community">
+      <h1>Online Community</h1>
+      <ul>
+        <li>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.content }}</p>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Payment and Pricing -->
+    <div class="payment-pricing">
+      <h1>Payment and Pricing</h1>
+      <ul>
+        <li>
+          <h2>Pricing Plan: {{ plan.name }}</h2>
+          <p>Features: {{ plan.features }}</p>
+          <p>Price: {{ plan.price }}</p>
+        </li>
+      </ul>
+    </div>
